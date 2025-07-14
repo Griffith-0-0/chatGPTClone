@@ -1,0 +1,17 @@
+<div class="container py-4 d-flex flex-column vh-100">
+  <h2 class="text-center mb-4">ChatGPT Clone</h2>
+
+  <div id="chat-box" #chatBox class="d-flex flex-column">
+    <div *ngFor="let msg of messages" class="message" [ngClass]="{
+    'user': msg.sender === 'user',
+    'bot': msg.sender === 'bot'
+  }">
+      {{ msg.text }}
+    </div>
+  </div>
+
+  <form [formGroup]="chatFormGroup" (ngSubmit)="sendQuerry()">
+    <input formControlName="querry" placeholder="Tapez votre message..." required>
+    <button type="submit">Envoyer</button>
+  </form>
+</div>
