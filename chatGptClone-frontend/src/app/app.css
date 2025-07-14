@@ -1,0 +1,106 @@
+/* Général */
+*{
+  background-color: #343541;
+
+}
+html, body {
+  height: 100%;
+  margin: 0;
+  padding: 0;
+  background-color: #343541;
+}
+
+body {
+  background-color: #343541;
+  color: #ffffff;
+  font-family: 'Segoe UI', sans-serif;
+  margin: 0;
+}
+
+/* Conteneur principal */
+.container {
+  max-width: 100% !important;
+  display: flex;
+  flex-direction: column;
+  height: 100vh;
+  padding: 1rem;
+}
+
+/* Titre */
+h2 {
+  color: #ececec;
+}
+
+/* Zone de chat */
+#chat-box {
+  flex: 1;
+  overflow-y: auto;
+  padding: 1rem;
+  background-color: #444654;
+  border-radius: 10px;
+  margin-bottom: 1rem;
+}
+
+/* Bulle de message */
+.message {
+  margin-bottom: 1rem;
+  max-width: 75%;
+  line-height: 1.5;
+  padding: 0.75rem 1rem;
+  border-radius: 8px;
+  word-wrap: break-word;
+  white-space: pre-wrap;
+}
+
+/* Message utilisateur */
+.user {
+  align-self: flex-end;
+  background-color: #2b2c30;
+  color: #fff;
+  border: 1px solid #565869;
+}
+
+/* Message bot */
+.bot {
+  align-self: flex-start;
+  background-color: #55576a;
+  color: #f3f3f3;
+}
+
+/* Formulaire de saisie */
+form {
+  display: flex;
+  gap: 0.5rem;
+  background-color: #40414f;
+  padding: 0.75rem;
+  border-radius: 10px;
+  position: sticky;
+  bottom: 0;
+}
+
+form input {
+  flex: 1;
+  background-color: #40414f;
+  border: none;
+  color: #fff;
+  padding: 0.75rem;
+  border-radius: 6px;
+  outline: none;
+}
+
+form input::placeholder {
+  color: #aaaaaa;
+}
+
+form button {
+  background-color: #19c37d;
+  border: none;
+  color: white;
+  padding: 0.75rem 1.2rem;
+  border-radius: 6px;
+  font-weight: bold;
+  cursor: pointer;
+}
+#chat-box{
+  scrollbar-width: none;
+}
